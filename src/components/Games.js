@@ -1,14 +1,34 @@
 import GameItem from './GameItem';
+import { useGetGamesQuery } from '../features/gameSlice';
+import useFilter from '../hooks/useFilter';
 
-function Games({ games }) {
-  return (
-    <div className="twelve wide column">
-      <h3 className="ui dividing header">Games</h3>
+function Games() {
+  const { data, isError, isLoading } = useGetGamesQuery();
+  const filteredData = useFilter(data);
+
+  const renderGames = () => {
+    if (isLoading) return <div className="ui active centered inline loader"></div>;
+
+    if (isError)
+      return (
+        <div class="ui negative message">
+          <div class="header">Error</div>
+        </div>
+      );
+
+    return (
       <div className="ui relaxed divided game items links">
-        {games.map(({ code, icon, name, description }) => (
+        {filteredData.map(({ code, icon, name, description }) => (
           <GameItem key={code} code={code} icon={icon} name={name} description={description} />
         ))}
       </div>
+    );
+  };
+
+  return (
+    <div className="twelve wide column">
+      <h3 className="ui dividing header">Games</h3>
+      {renderGames()}
     </div>
   );
 }

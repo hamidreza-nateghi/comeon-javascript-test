@@ -25,7 +25,7 @@ function Login() {
       setPlayerItem({ ...res.player, username });
       navigate(from, { replace: true });
     } catch (error) {
-      alert(error.data.error);
+      alert(error.data?.error);
     }
   };
 
@@ -67,7 +67,7 @@ function Login() {
             <div class="ui error message">
               <ul className="list">
                 {Object.values(errors).map((error) => (
-                  <li>{error.message}</li>
+                  <li key={error.message}>{error.message}</li>
                 ))}
               </ul>
             </div>
