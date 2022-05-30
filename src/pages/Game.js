@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 function Game() {
   const { code } = useParams();

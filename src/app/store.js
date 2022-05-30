@@ -1,6 +1,6 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { apiSlice } from '../features/apiSlice';
-import { filterSlice } from '../features/filterSlice';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { apiSlice } from "../features/apiSlice";
+import { filterSlice } from "../features/filterSlice";
 
 const reducer = combineReducers({
   filter: filterSlice.reducer,

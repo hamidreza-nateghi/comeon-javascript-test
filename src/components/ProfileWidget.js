@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function ProfileWidget({ avatar, name, event }) {
   return (
     <div className="ui list">
@@ -13,5 +15,11 @@ function ProfileWidget({ avatar, name, event }) {
     </div>
   );
 }
+
+ProfileWidget.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  event: PropTypes.string,
+};
 
 export default ProfileWidget;

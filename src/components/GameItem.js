@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function GameItem({ code, icon, name, description }) {
   return (
@@ -23,5 +24,12 @@ function GameItem({ code, icon, name, description }) {
     </div>
   );
 }
+
+GameItem.propTypes = {
+  code: PropTypes.string,
+  icon: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+};
 
 export default GameItem;

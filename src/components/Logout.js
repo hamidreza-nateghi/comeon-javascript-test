@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-import { useLogoutMutation } from '../features/apiSlice';
-import { getPlayerItem } from '../utils';
+import { useNavigate } from "react-router-dom";
+import { useLogoutMutation } from "../features/apiSlice";
+import { getPlayerItem } from "../utils";
 
 function Logout() {
   const navigate = useNavigate();
@@ -11,8 +11,8 @@ function Logout() {
     try {
       const res = await logout({ username }).unwrap();
       console.log(res);
-      localStorage.removeItem('Player');
-      navigate('login');
+      localStorage.removeItem("Player");
+      navigate("login");
     } catch (error) {
       alert(error.data.error);
     }

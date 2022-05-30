@@ -1,10 +1,10 @@
-import Games from '../components/Games';
-import Categories from '../components/Categories';
-import { getPlayerItem } from '../utils';
-import ProfileWidget from '../components/ProfileWidget';
-import Logout from '../components/Logout';
-import GameProvider from '../context/GameContext';
-import SearchInput from '../components/SearchInput';
+import Games from "../components/Games";
+import Categories from "../components/Categories";
+import { getPlayerItem } from "../utils";
+import ProfileWidget from "../components/ProfileWidget";
+import Logout from "../components/Logout";
+import GameProvider from "../context/GameContext";
+import SearchInput from "../components/SearchInput";
 
 function Casino() {
   const player = getPlayerItem();

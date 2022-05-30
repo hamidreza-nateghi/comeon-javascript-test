@@ -1,12 +1,12 @@
-import { apiSlice } from './apiSlice';
+import { apiSlice } from "./apiSlice";
 
 export const gameSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getGames: builder.query({
-      query: () => '/games',
+      query: () => "/games",
     }),
     getCategories: builder.query({
-      query: () => '/categories',
+      query: () => "/categories",
     }),
   }),
 });

@@ -1,6 +1,6 @@
-import GameItem from './GameItem';
-import { useGetGamesQuery } from '../features/gameSlice';
-import useFilter from '../hooks/useFilter';
+import GameItem from "./GameItem";
+import { useGetGamesQuery } from "../features/gameSlice";
+import useFilter from "../hooks/useFilter";
 
 function Games() {
   const { data, isError, isLoading } = useGetGamesQuery();
@@ -11,8 +11,8 @@ function Games() {
 
     if (isError)
       return (
-        <div class="ui negative message">
-          <div class="header">Error</div>
+        <div className="ui negative message">
+          <div className="header">Error</div>
         </div>
       );
 

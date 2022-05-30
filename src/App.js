@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Login from './pages/Login';
-import Casino from './pages/Casino';
-import Game from './pages/Game';
-import NotFound from './pages/NotFound';
-import ProtectedRoute from './ProtectedRoute';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./pages/Login";
+import Casino from "./pages/Casino";
+import Game from "./pages/Game";
+import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (

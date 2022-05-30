@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux';
-import { setQuery } from '../features/filterSlice';
+import { useDispatch } from "react-redux";
+import { setQuery } from "../features/filterSlice";
 
 function SearchInput() {
   const dispatch = useDispatch();

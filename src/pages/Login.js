@@ -1,9 +1,9 @@
-import { useForm } from 'react-hook-form';
-import { useLocation, useNavigate } from 'react-router-dom';
-import clsx from 'clsx';
-import _ from 'lodash';
-import { useLoginMutation } from '../features/apiSlice';
-import { setPlayerItem } from '../utils';
+import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
+import clsx from "clsx";
+import _ from "lodash";
+import { useLoginMutation } from "../features/apiSlice";
+import { setPlayerItem } from "../utils";
 
 function Login() {
   const {
@@ -15,7 +15,7 @@ function Login() {
   const navigate = useNavigate();
   const [login, { isLoading }] = useLoginMutation();
 
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = async (data) => {
     const { username, password } = data;
@@ -35,36 +35,36 @@ function Login() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="fields">
             <div className="required field">
-              <div className={clsx('ui icon input', errors.username && 'error')}>
+              <div className={clsx("ui icon input", errors.username && "error")}>
                 <input
                   type="text"
                   name="username"
                   placeholder="Username"
-                  {...register('username', { required: 'Username is required' })}
+                  {...register("username", { required: "Username is required" })}
                 />
                 <i className="user icon"></i>
               </div>
             </div>
             <div className="required field">
-              <div className={clsx('ui icon input', errors.password && 'error')}>
+              <div className={clsx("ui icon input", errors.password && "error")}>
                 <input
                   type="password"
                   name="password"
                   placeholder="Password"
-                  {...register('password', { required: 'Password is required' })}
+                  {...register("password", { required: "Password is required" })}
                 />
                 <i className="lock icon"></i>
               </div>
             </div>
             <div className="field">
-              <div className={clsx('ui icon input', isLoading && 'loading')}>
+              <div className={clsx("ui icon input", isLoading && "loading")}>
                 <input type="submit" value="Login" disabled={isLoading} />
                 <i className="right chevron icon"></i>
               </div>
             </div>
           </div>
           {!_.isEmpty(errors) && (
-            <div class="ui error message">
+            <div className="ui error message">
               <ul className="list">
                 {Object.values(errors).map((error) => (
                   <li key={error.message}>{error.message}</li>

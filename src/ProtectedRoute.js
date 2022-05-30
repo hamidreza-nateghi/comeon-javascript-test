@@ -1,5 +1,5 @@
-import { useLocation, Navigate, Outlet } from 'react-router-dom';
-import { getPlayerItem } from './utils';
+import { useLocation, Navigate, Outlet } from "react-router-dom";
+import { getPlayerItem } from "./utils";
 
 function ProtectedRoute() {
   const location = useLocation();
