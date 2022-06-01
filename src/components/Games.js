@@ -26,7 +26,7 @@ function Games() {
   };
 
   return (
-    <div className="twelve wide column">
+    <div className="twelve wide column games">
       <h3 className="ui dividing header">Games</h3>
       {renderGames()}
     </div>

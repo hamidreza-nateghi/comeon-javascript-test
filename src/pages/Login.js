@@ -25,7 +25,8 @@ function Login() {
       setPlayerItem({ ...res.player, username });
       navigate(from, { replace: true });
     } catch (error) {
-      alert(error.data?.error);
+      if (error.data) alert(error.data.error);
+      else alert("Json server not running!");
     }
   };
 

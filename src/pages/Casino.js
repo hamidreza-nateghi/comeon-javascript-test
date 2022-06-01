@@ -21,7 +21,7 @@ function Casino() {
             <SearchInput />
           </div>
         </div>
-        <div className="ui grid">
+        <div className="ui grid stackable">
           <Games />
           <Categories />
         </div>

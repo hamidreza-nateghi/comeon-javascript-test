@@ -24,5 +24,8 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"]
+  "plugins": ["react"],
+  "rules": {
+    "no-unused-vars": "warn"
+  }
 }

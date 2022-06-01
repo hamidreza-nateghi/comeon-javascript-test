@@ -16,3 +16,13 @@ body {
 .search {
   float: right;
 }
+
+@media only screen and (max-width: 767px) {
+  .games {
+    order: 2;
+  }
+
+  .categories {
+    order: 1;
+  }
+}

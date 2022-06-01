@@ -43,7 +43,7 @@ function Categories() {
   };
 
   return (
-    <div className="four wide column">
+    <div className="four wide column categories">
       <h3 className="ui dividing header">Categories</h3>
       {renderCategories()}
     </div>
